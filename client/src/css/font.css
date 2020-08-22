@@ -1,0 +1,9 @@
+@font-face{
+  font-family: "KangXiZiDianOpt";
+	src: url("../font/KangXiDictOpt.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "KangXiZiDianCommon";
+	src: url("../font/KangXiDictCommon.ttf") format("truetype");
+}

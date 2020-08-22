@@ -11,6 +11,10 @@ import IsshoikkaPlant from "../entities/IsshoikkaPlant";
 import IsshoikkaArrangementActionConstants from "../constants/IsshoikkaArrangementActionConstants";
 import IsshoikkaPlantActionConstants from "../constants/IsshoikkaPlantActionConstants";
 
+import * as arrangementsData from "../data/arrangements.json";
+import * as plantsData from "../data/plants.json";
+import * as arrangementPlantMapData from "../data/arrangement_plant_map.json";
+
 import type { ArrangementList, PlantList } from "./IsshoikkaInitializer";
 import type { ImageQuality } from "../entities/IsshoikkaImage";
 import type { PlantMap } from "../stores/IsshoikkaPlantStore";
@@ -33,21 +37,15 @@ function getAsyncRequestPromise(uri: string, data: FormData): Promise<Object> {
 
 const IsshoikkaDBUtil = {
     getAllArrangements(): Promise<ArrangementList> {
-        let data = new FormData();
-        data.append("action", IsshoikkaArrangementActionConstants.LOAD_ALL);
-        return getAsyncRequestPromise(
-            ISSHOIKKA_ARRANGEMENT_DB_CONTROLLER_URI,
-            data
-        ).then((response: any) => {
-            if (!response || !response.payload) {
-                return Immutable.List();
-            }
-            return Immutable.List(
-                response.payload.map(
+        const arrangements: any[] = (arrangementsData as any).default;
+
+        return new Promise((resolve) =>
+            resolve(
+                Immutable.List(arrangements).map(
                     (row: any) => new IsshoikkaArrangement(row)
                 )
-            );
-        });
+            )
+        );
     },
 
     loadMask(): Promise<void> {
@@ -80,12 +78,41 @@ const IsshoikkaDBUtil = {
     },
 
     getAllPlants(): Promise<PlantList> {
-        return this.getPlantListPromise(IsshoikkaPlantActionConstants.LOAD_ALL);
+        const plants: any[] = (plantsData as any).default;
+
+        return new Promise((resolve) =>
+            resolve(
+                Immutable.List(plants).map(
+                    (row: any) => new IsshoikkaPlant(row)
+                )
+            )
+        );
     },
 
     getAllPlantsWithArrangementID(): Promise<PlantList> {
-        return this.getPlantListPromise(
-            IsshoikkaPlantActionConstants.LOAD_ALL_WITH_ARRANGEMENT_ID
+        const plants: any[] = (plantsData as any).default;
+        const plantMap = Immutable.Map(
+            plants.map((entry) => [entry.id, entry])
+        );
+
+        const arrangementPlantMap: any[] = (arrangementPlantMapData as any)
+            .default;
+
+        const plantsWithArrangementIDs: any[] = [];
+
+        for (const { arrangement_id, plant_id } of arrangementPlantMap) {
+            plantsWithArrangementIDs.push({
+                ...plantMap.get(plant_id),
+                arrangement_id,
+            });
+        }
+
+        return new Promise((resolve) =>
+            resolve(
+                Immutable.List(plantsWithArrangementIDs).map(
+                    (row: any) => new IsshoikkaPlant(row)
+                )
+            )
         );
     },
 

@@ -30,6 +30,7 @@ function storeAllArrangements(
         (arrangementA, arrangementB) =>
             arrangementA.getID() - arrangementB.getID()
     );
+    console.log('store _arrangementMap', _arrangementMap);
     IsshoikkaArrangementStore.emitChange();
 }
 

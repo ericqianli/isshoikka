@@ -14,8 +14,8 @@ export default class IsshoikkaPlant {
     _englishName: string;
 
     constructor(row: any) {
-        this._id = row.id;
-        this._arrangement_id = row.arrangement_id;
+        this._id = Number(row.id);
+        this._arrangement_id = Number(row.arrangement_id);
         this._chineseName = row.chinese_name;
         this._japaneseName = row.japanese_name;
         this._englishName = row.english_name;

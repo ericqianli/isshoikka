@@ -10,17 +10,18 @@ const TEST_FONT_STRING: string = "\uE05A";
 
 const IsshoikkaFontUtil = {
     loadAll(): Promise<boolean> {
+        console.log('load all fonts');
         return new Promise((resolve) => {
             WebFont.load({
                 custom: {
                     families: ["KangXiZiDianCommon", "KangXiZiDianOpt"],
-                    urls: ["/css/font.css"],
                     testStrings: {
                         KangXiZiDianOpt: TEST_FONT_STRING,
                     },
                 },
                 timeout: LOAD_FONT_TIMEOUT_MS,
                 active: function () {
+                    console.warn("Loading fonts succeeded.");
                     resolve(true);
                 },
                 inactive: function () {

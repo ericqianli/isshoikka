@@ -102,6 +102,7 @@ IsshoikkaArrangementNavigationStore.dispatchToken = IsshoikkaDispatcher.register
                     const firstArrangement = IsshoikkaArrangementStore.getFirstArrangement();
                     arrangementID = firstArrangement.getID();
                 }
+                console.log('check arrangementID', arrangementID);
                 invariant(
                     typeof arrangementID == "number",
                     "arrangement ID must be a number"

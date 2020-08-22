@@ -16,9 +16,9 @@ export default class IsshoikkaArrangement {
     _config: Immutable.Map<string, any>;
 
     constructor(row: any) {
-        this._id = row.id;
+        this._id = Number(row.id);
         this._date = row.date;
-        this._config = Immutable.Map(row.config);
+        this._config = Immutable.Map(JSON.parse(row.config));
     }
 
     getID(): number {

@@ -66,6 +66,7 @@ export default class IsshoikkaFluxContainer extends Component {
     }
 
     _onChange() {
+      console.log('on change', getState());
         this.setState(getState());
     }
 

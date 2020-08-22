@@ -1,0 +1,187 @@
+[
+    {
+        "id": "0",
+        "date": "2016-06-11",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.1}"
+    },
+    {
+        "id": "1",
+        "date": "2015-04-26",
+        "config": "{\"offsetX\":0.5,\"offsetY\":1.02}"
+    },
+    {
+        "id": "2",
+        "date": "2015-04-28",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "3",
+        "date": "2015-05-18",
+        "config": "{\"offsetX\":0.28,\"offsetY\":0.5}"
+    },
+    {
+        "id": "4",
+        "date": "2015-05-20",
+        "config": "{\"offsetX\":0.7,\"offsetY\":0.5}"
+    },
+    {
+        "id": "5",
+        "date": "2015-05-20",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.75}"
+    },
+    {
+        "id": "6",
+        "date": "2015-04-07",
+        "config": "{\"offsetX\":0.5,\"offsetY\":-2}"
+    },
+    {
+        "id": "7",
+        "date": "2015-02-07",
+        "config": "{\"offsetX\":0.83,\"offsetY\":0.5}"
+    },
+    {
+        "id": "8",
+        "date": "2015-06-13",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.9}"
+    },
+    {
+        "id": "9",
+        "date": "2015-06-18",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "10",
+        "date": "2015-07-05",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "11",
+        "date": "2015-07-20",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "12",
+        "date": "2015-09-09",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.0}"
+    },
+    {
+        "id": "13",
+        "date": "2015-10-13",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "14",
+        "date": "2016-01-05",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "15",
+        "date": "2016-02-07",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "16",
+        "date": "2016-02-15",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "17",
+        "date": "2016-03-06",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.55}"
+    },
+    {
+        "id": "18",
+        "date": "2016-04-10",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "19",
+        "date": "2016-04-18",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "20",
+        "date": "2016-05-13",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "21",
+        "date": "2016-06-11",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "22",
+        "date": "2016-10-03",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.4}"
+    },
+    {
+        "id": "23",
+        "date": "2016-11-05",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.4}"
+    },
+    {
+        "id": "24",
+        "date": "2016-11-26",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.55}"
+    },
+    {
+        "id": "25",
+        "date": "2017-01-07",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.6}"
+    },
+    {
+        "id": "26",
+        "date": "2017-02-18",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.45}"
+    },
+    {
+        "id": "27",
+        "date": "2017-03-20",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.35}"
+    },
+    {
+        "id": "28",
+        "date": "2017-06-04",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.46}"
+    },
+    {
+        "id": "29",
+        "date": "2017-07-04",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.45}"
+    },
+    {
+        "id": "30",
+        "date": "2017-08-05",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "31",
+        "date": "2017-09-09",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.4}"
+    },
+    {
+        "id": "32",
+        "date": "2017-10-01",
+        "config": "{\"offsetX\":0.7,\"offsetY\":0.5}\n"
+    },
+    {
+        "id": "33",
+        "date": "2017-11-26",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.4}"
+    },
+    {
+        "id": "34",
+        "date": "2018-01-06",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.4}"
+    },
+    {
+        "id": "35",
+        "date": "2018-02-09",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.5}"
+    },
+    {
+        "id": "36",
+        "date": "2020-07-26",
+        "config": "{\"offsetX\":0.5,\"offsetY\":0.6}"
+    }
+]

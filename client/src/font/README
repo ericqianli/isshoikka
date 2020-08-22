@@ -1,0 +1,15 @@
+To generate font subset:
+
+value=`cat poem.txt` &&
+fontmin KangXiDictFull.otf -t "$value" > KangXiDictPoem.ttf
+
+value=`cat names.txt` &&
+fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
+
+value=`cat ../sql/isshoikka.sql` &&
+fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
+
+--value=`cat ../sql/plant.sql` &&
+--fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
+
+fontmin KangXiDictCommon.ttf > KangXiDictCommon.otf

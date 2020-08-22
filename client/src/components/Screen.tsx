@@ -86,6 +86,7 @@ class Screen extends Component<Props, State> {
 
     _getNameColumns(): Array<any> {
         const plantList = this.props.plantList;
+        console.log('plantList', plantList?.toJSON());
         if (!plantList || !Immutable.List.isList(plantList)) {
             return [];
         }
