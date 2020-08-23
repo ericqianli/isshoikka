@@ -63,8 +63,14 @@ const IsshoikkaDBUtil = {
         return new Promise((resolve) => {
             let image = new Image();
             const imageUrl = arrangement.getImageURI(quality);
-            image.src = imageUrl;
+
+            // const heroImageUrl = require(imageUrl);
+
+            console.log('imageUrl', imageUrl);
+            // console.log('heroImageUrl', heroImageUrl);
+            
             image.onload = () => {
+                console.log("image loaded");
                 const isshoikkaImage = new IsshoikkaImage({
                     arrangement_id: arrangement.getID(),
                     url: imageUrl,
@@ -74,6 +80,12 @@ const IsshoikkaDBUtil = {
                 });
                 resolve(isshoikkaImage);
             };
+
+            image.onerror = () => {
+                console.log("loading image error");
+            };
+
+            image.src = imageUrl;
         });
     },
 
