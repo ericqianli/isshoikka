@@ -216,7 +216,7 @@ body {
 }
 
 #title {
-	background-image: url("/images/title.png");
+	background-image: url("/public/images/title.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	height: 350px;
@@ -345,7 +345,7 @@ body {
 
 #ying {
 	display: inline-block;
-	background-image: url("/images/ying.png");
+	background-image: url("/public/images/ying.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -359,7 +359,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	background-image: url("/images/mask.png")
+	background-image: url("/public/images/mask.png")
 }
 
 #fan {
@@ -493,15 +493,15 @@ body {
 }
 
 .arrowLeft {
-	background-image: url("/images/left.png");
+	background-image: url("/public/images/left.png");
 }
 
 .arrowRight {
-	background-image: url("/images/right.png");
+	background-image: url("/public/images/right.png");
 }
 
 .arrowLeftDark {
-	background-image: url("/images/left-dark.png");
+	background-image: url("/public/images/left-dark.png");
 }
 
 .arrowLeftDark:hover {
@@ -509,7 +509,7 @@ body {
 }
 
 .arrowRightDark {
-	background-image: url("/images/right-dark.png");
+	background-image: url("/public/images/right-dark.png");
 }
 
 .arrowRightDark:hover {
