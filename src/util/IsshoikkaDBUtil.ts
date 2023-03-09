@@ -23,7 +23,8 @@ import type { PlantMap } from "../stores/IsshoikkaPlantStore";
 
 const ISSHOIKKA_PLANT_DB_CONTROLLER_URI =
     "/php/controllers/IsshoikkaPlantDBController.php";
-const ISSHOIKKA_MASK_URL = process.env.PUBLIC_URL + "/images/mask.png";
+const ISSHOIKKA_MASK_URL = "./images/mask.png";
+// const ISSHOIKKA_MASK_URL = process.env.PUBLIC_URL + "/images/mask.png";
 
 function getAsyncRequestPromise(uri: string, data: FormData): Promise<Object> {
     return new Promise((resolve) =>
