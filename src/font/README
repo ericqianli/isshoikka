@@ -1,8 +1,5 @@
 To generate font subset:
 
-value=`cat poem.txt` &&
-fontmin KangXiDictFull.otf -t "$value" > KangXiDictPoem.ttf
-
 value=`cat names.txt` &&
 fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
 
@@ -13,3 +10,11 @@ fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
 --fontmin KangXiDictFull.otf -t "$value" > KangXiDictOpt.ttf
 
 fontmin KangXiDictCommon.ttf > KangXiDictCommon.otf
+
+
+
+
+
+or
+generate font subset:
+pyftsubset KangXiDictFull.otf --text-file="./names.txt"
