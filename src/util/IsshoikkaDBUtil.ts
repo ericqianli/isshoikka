@@ -5,8 +5,6 @@
 
 // import TitleImageOneDark from "../images/6-low.jpg";
 
-
-
 import AsyncRequest from "../core/AsyncRequest";
 import Immutable from "immutable";
 import IsshoikkaArrangement from "../entities/IsshoikkaArrangement";
@@ -23,13 +21,9 @@ import type { ArrangementList, PlantList } from "./IsshoikkaInitializer";
 import type { ImageQuality } from "../entities/IsshoikkaImage";
 import type { PlantMap } from "../stores/IsshoikkaPlantStore";
 
-
-
 const ISSHOIKKA_PLANT_DB_CONTROLLER_URI =
     "/php/controllers/IsshoikkaPlantDBController.php";
-const ISSHOIKKA_MASK_URL = "/images/mask.png";
-
-
+const ISSHOIKKA_MASK_URL = process.env.PUBLIC_URL + "/images/mask.png";
 
 function getAsyncRequestPromise(uri: string, data: FormData): Promise<Object> {
     return new Promise((resolve) =>
@@ -69,8 +63,8 @@ const IsshoikkaDBUtil = {
         return new Promise((resolve) => {
             let image = new Image();
             const imageUrl = arrangement.getImageURI(quality);
-            console.log('imageUrl', imageUrl);
-            
+            console.log("imageUrl", imageUrl);
+
             image.onload = () => {
                 console.log("!!!image loaded");
                 const isshoikkaImage = new IsshoikkaImage({

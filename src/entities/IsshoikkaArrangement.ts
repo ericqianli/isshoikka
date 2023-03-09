@@ -8,7 +8,7 @@ import Immutable from "immutable";
 import type { ImageQuality } from "./IsshoikkaImage";
 import type { Point } from "../components/Fan";
 
-const IMAGE_PATH = "../images/";
+const IMAGE_PATH = process.env.PUBLIC_URL + "/images/";
 
 export default class IsshoikkaArrangement {
     _id: number;
