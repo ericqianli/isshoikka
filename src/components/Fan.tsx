@@ -45,8 +45,6 @@ const MIN_ZOOM_RATIO: number = 0.92;
 const MAX_ZOOM_RATIO: number = 3.0;
 const ZOOM_STEP: number = 0.005;
 
-const MASK_URL: string = "/images/mask.png";
-
 class Fan extends Component<Props, State> {
     _startMousePosition: Point = { x: 0, y: 0 };
     _startImagePosition: Point = { x: 0, y: 0 };

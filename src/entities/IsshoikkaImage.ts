@@ -31,10 +31,6 @@ export default class IsshoikkaImage {
         return this._url;
     }
 
-    getCoverUrl(): string {
-        return "/images/" + this._arrangement_id + ".png";
-    }
-
     getDimension(): Dimension {
         return this._dimension;
     }
