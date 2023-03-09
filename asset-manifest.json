@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/isshoikka/static/css/main.e6367e69.css",
-    "main.js": "/isshoikka/static/js/main.70495eb9.js",
+    "main.js": "/isshoikka/static/js/main.f48810d7.js",
     "static/media/KangXiDictOpt.ttf": "/isshoikka/static/media/KangXiDictOpt.3014a718c7f175488098.ttf",
     "static/media/KangXiDictCommon.ttf": "/isshoikka/static/media/KangXiDictCommon.a834805afd5c4648200a.ttf",
     "static/media/mask.png": "/isshoikka/static/media/mask.e00bc88d2a09c1e4a039.png",
@@ -11,10 +11,10 @@
     "static/media/right.png": "/isshoikka/static/media/right.9ea551d73ce7a4ce10bf.png",
     "index.html": "/isshoikka/index.html",
     "main.e6367e69.css.map": "/isshoikka/static/css/main.e6367e69.css.map",
-    "main.70495eb9.js.map": "/isshoikka/static/js/main.70495eb9.js.map"
+    "main.f48810d7.js.map": "/isshoikka/static/js/main.f48810d7.js.map"
   },
   "entrypoints": [
     "static/css/main.e6367e69.css",
-    "static/js/main.70495eb9.js"
+    "static/js/main.f48810d7.js"
   ]
 }
