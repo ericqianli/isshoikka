@@ -17,4 +17,4 @@ fontmin KangXiDictCommon.ttf > KangXiDictCommon.otf
 
 or
 generate font subset:
-pyftsubset KangXiDictFull.otf --text-file="./names.txt"
+pyftsubset ./build/KangXiDictFull.otf --text-file="./names.txt"
