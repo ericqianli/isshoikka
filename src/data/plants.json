@@ -10,21 +10,21 @@
         "id": "2",
         "chinese_name": "\u849c",
         "japanese_name": "\u30cb\u30f3\u30cb\u30af",
-        "english_name": "Allium Sativum",
+        "english_name": "Allium sativum",
         "full_english_name": ""
     },
     {
         "id": "3",
         "chinese_name": "\u99ac\u8e44\u84ee",
         "japanese_name": "\u30aa\u30e9\u30f3\u30c0\u30ab\u30a4\u30a6",
-        "english_name": "Zantedeschia Aethiopica",
+        "english_name": "Zantedeschia aethiopica",
         "full_english_name": ""
     },
     {
         "id": "4",
         "chinese_name": "\u8449\u862d",
         "japanese_name": "\u30cf\u30e9\u30f3",
-        "english_name": "Aspidistra Elatior",
+        "english_name": "Aspidistra elatior",
         "full_english_name": ""
     },
     {
@@ -528,7 +528,7 @@
         "id": "76",
         "chinese_name": "\u5c71\u8336",
         "japanese_name": "\u30c4\u30d0\u30ad",
-        "english_name": "Camellia Japonica",
+        "english_name": "Camellia japonica",
         "full_english_name": ""
     },
     {
@@ -570,7 +570,14 @@
         "id": "82",
         "chinese_name": "\u6708\u5b63",
         "japanese_name": "\u30b3\u30a6\u30b7\u30f3\u30d0\u30e9",
-        "english_name": "Rosa Chinensis",
+        "english_name": "Rosa chinensis",
+        "full_english_name": ""
+    },
+    {
+        "id": "83",
+        "chinese_name": "\u6C34\u4ED9",
+        "japanese_name": "\u30b3\u30a6\u30b7\u30f3\u30d0\u30e9",
+        "english_name": "Narcissus papyraceus",
         "full_english_name": ""
     }
 ]

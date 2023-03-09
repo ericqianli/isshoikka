@@ -14,10 +14,11 @@ const IsshoikkaFontUtil = {
         return new Promise((resolve) => {
             WebFont.load({
                 custom: {
-                    families: ["KangXiZiDianCommon", "KangXiZiDianOpt"],
-                    testStrings: {
-                        KangXiZiDianOpt: TEST_FONT_STRING,
-                    },
+                    families: ["KangXiDictPlantNames"],
+                    // families: ["KangXiZiDianCommon", "KangXiZiDianOpt", "KangXiDictPlantNames"],
+                    // testStrings: {
+                    //     KangXiZiDianOpt: TEST_FONT_STRING,
+                    // },
                 },
                 timeout: LOAD_FONT_TIMEOUT_MS,
                 active: function () {

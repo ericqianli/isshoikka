@@ -7,3 +7,8 @@
   font-family: "KangXiZiDianCommon";
 	src: url("../font/KangXiDictCommon.ttf") format("truetype");
 }
+
+@font-face{
+  font-family: "KangXiDictPlantNames";
+	src: url("../font/KangXiDictPlantNames.otf") format("opentype");
+}

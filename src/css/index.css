@@ -192,7 +192,7 @@ body {
 }
 
 .fishTail {
-	font-family: "KangXiZiDianCommon", "KangXiZiDianOpt";
+	font-family: "KangXiZiDianCommon", "KangXiZiDianOpt", "KangXiDictPlantNames";
 	line-height: 1.1;
 	width: 1em; /* to hack the * firefox */
 	writing-mode: horizontal-tb;
