@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.6b057ab5.css",
-    "main.js": "./static/js/main.0ee030a7.js",
+    "main.css": "./static/css/main.6b9076c6.css",
+    "main.js": "./static/js/main.8f512970.js",
     "static/media/KangXiDictOpt.ttf": "./static/media/KangXiDictOpt.3014a718c7f175488098.ttf",
     "static/media/KangXiDictCommon.ttf": "./static/media/KangXiDictCommon.a834805afd5c4648200a.ttf",
     "static/media/mask.png": "./static/media/mask.e00bc88d2a09c1e4a039.png",
@@ -11,11 +11,11 @@
     "static/media/left.png": "./static/media/left.7b0351b55cfa5e92798f.png",
     "static/media/right.png": "./static/media/right.9ea551d73ce7a4ce10bf.png",
     "index.html": "./index.html",
-    "main.6b057ab5.css.map": "./static/css/main.6b057ab5.css.map",
-    "main.0ee030a7.js.map": "./static/js/main.0ee030a7.js.map"
+    "main.6b9076c6.css.map": "./static/css/main.6b9076c6.css.map",
+    "main.8f512970.js.map": "./static/js/main.8f512970.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b057ab5.css",
-    "static/js/main.0ee030a7.js"
+    "static/css/main.6b9076c6.css",
+    "static/js/main.8f512970.js"
   ]
 }

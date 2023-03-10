@@ -53,11 +53,20 @@ class Arrow extends Component<Props> {
     }
 
     render() {
-
-        return (<div id="ying"></div>);
-
         const width = 48;
         const size = 48;
+        return (<div
+            className={classNames(
+                "arrow",
+                this._getArrowClass("dark")
+            )}
+            style={{
+                width: width + "px",
+                backgroundSize: size + "px  auto",
+            }}
+        />);
+
+
         return (
             <div className="sideNavigation" onClick={this._onClick}>
                 <div
