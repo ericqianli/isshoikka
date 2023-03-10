@@ -56,26 +56,12 @@ class Arrow extends Component<Props> {
         return (
             <div className="sideNavigation" onClick={this._onClick}>
                 <div
-                    className={classNames(
-                        "arrow",
-                        this._getArrowClass("bright")
-                    )}
+                    className={classNames("arrow", this._getArrowClass("dark"))}
                     style={{
                         width: this.props.width + "px",
                         backgroundSize: this.props.size + "px  auto",
                     }}
-                >
-                    <div
-                        className={classNames(
-                            "arrow",
-                            this._getArrowClass("dark")
-                        )}
-                        style={{
-                            width: this.props.width + "px",
-                            backgroundSize: this.props.size + "px  auto",
-                        }}
-                    />
-                </div>
+                />
             </div>
         );
     }

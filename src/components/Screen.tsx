@@ -147,6 +147,9 @@ class Screen extends Component<Props, State> {
                         width: wingWidth,
                         height,
                         fontSize: fontSize,
+                        visibility: this.props.fontLoaded
+                            ? "initial"
+                            : "hidden",
                     }}
                 >
                     <div className="title">
@@ -190,6 +193,11 @@ class Screen extends Component<Props, State> {
                         width: wingWidth,
                         height,
                         fontSize: fontSize,
+                        visibility:
+                            this.props.fontLoaded &&
+                            !this.state.arrangementSwitching
+                                ? "initial"
+                                : "hidden",
                     }}
                 >
                     <ul className={classNames("menu")}>
