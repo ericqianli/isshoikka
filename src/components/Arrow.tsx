@@ -54,6 +54,7 @@ class Arrow extends Component<Props> {
 
     render() {
         const width = 48;
+        const height = 48;
         const size = 48;
         return (<div
             className={classNames(
@@ -62,6 +63,7 @@ class Arrow extends Component<Props> {
             )}
             style={{
                 width: width + "px",
+                height: height + "px",
                 backgroundSize: size + "px  auto",
             }}
         />);
