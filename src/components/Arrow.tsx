@@ -53,6 +53,9 @@ class Arrow extends Component<Props> {
     }
 
     render() {
+
+        const width = 48;
+        const size = 48;
         return (
             <div className="sideNavigation" onClick={this._onClick}>
                 <div
@@ -61,8 +64,8 @@ class Arrow extends Component<Props> {
                         this._getArrowClass("bright")
                     )}
                     style={{
-                        width: this.props.width + "px",
-                        backgroundSize: this.props.size + "px  auto",
+                        width: width + "px",
+                        backgroundSize: size + "px  auto",
                     }}
                 >
                     <div
@@ -71,8 +74,8 @@ class Arrow extends Component<Props> {
                             this._getArrowClass("dark")
                         )}
                         style={{
-                            width: this.props.width + "px",
-                            backgroundSize: this.props.size + "px  auto",
+                            width: width + "px",
+                            backgroundSize: size + "px  auto",
                         }}
                     />
                 </div>
