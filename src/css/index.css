@@ -508,7 +508,7 @@ body {
 }
 
 .arrowLeftDark:hover {
-	opacity: 0;
+	/* opacity: 0; */
 }
 
 .arrowRightDark {
@@ -516,7 +516,7 @@ body {
 }
 
 .arrowRightDark:hover {
-	opacity: 0;
+	/* opacity: 0; */
 }
 
 #testFont span {
