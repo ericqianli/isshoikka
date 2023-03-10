@@ -281,6 +281,7 @@ body {
 	display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
+	background-color: red;
 }
 
 #header, #footer {
