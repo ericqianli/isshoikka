@@ -115,7 +115,6 @@ class Screen extends Component<Props, State> {
         const width = this.props.fanSize;
         const wingWidth = this._getWingWidth();
         const fontSize = Math.round(height * 0.03);
-        const menuWidth = fontSize * 1.5 * 12;
 
         return (
             <div
@@ -148,9 +147,6 @@ class Screen extends Component<Props, State> {
                         width: wingWidth,
                         height,
                         fontSize: fontSize,
-                        visibility: this.props.fontLoaded
-                            ? "initial"
-                            : "hidden",
                     }}
                 >
                     <div className="title">
@@ -194,11 +190,6 @@ class Screen extends Component<Props, State> {
                         width: wingWidth,
                         height,
                         fontSize: fontSize,
-                        visibility:
-                            this.props.fontLoaded &&
-                            !this.state.arrangementSwitching
-                                ? "initial"
-                                : "hidden",
                     }}
                 >
                     <ul className={classNames("menu")}>
