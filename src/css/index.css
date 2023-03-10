@@ -281,7 +281,6 @@ body {
 	display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
-	background-color: green;
 }
 
 #header, #footer {
@@ -482,7 +481,6 @@ body {
 
 .sideNavigation, .arrow {
 	cursor: pointer;
-	background-color: blue;
 	height: auto;
 }
 
