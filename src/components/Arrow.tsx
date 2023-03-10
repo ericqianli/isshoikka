@@ -78,6 +78,7 @@ class Arrow extends Component<Props> {
                     )}
                     style={{
                         width: width + "px",
+                        height: height + "px",
                         backgroundSize: size + "px  auto",
                     }}
                 >
@@ -88,6 +89,7 @@ class Arrow extends Component<Props> {
                         )}
                         style={{
                             width: width + "px",
+                            height: height + "px",
                             backgroundSize: size + "px  auto",
                         }}
                     />
