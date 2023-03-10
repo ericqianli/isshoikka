@@ -30,7 +30,8 @@ type Props = {};
 function getState(): State {
     return {
         arrangementMap: IsshoikkaArrangementStore.getArrangementMap(),
-        currentArrangementID: IsshoikkaArrangementNavigationStore.getCurrentArrangementID(),
+        currentArrangementID:
+            IsshoikkaArrangementNavigationStore.getCurrentArrangementID(),
         fontLoaded: IsshoikkaFontStore.isFontLoaded(),
         imageMap: IsshoikkaImageStore.getImageMap(),
         maskLoaded: IsshoikkaImageStore.isMaskLoaded(),
@@ -59,14 +60,15 @@ export default class IsshoikkaFluxContainer extends Component {
 
     componentWillUnmount() {
         IsshoikkaArrangementStore.removeChangeListener(this._onChange);
-        IsshoikkaArrangementNavigationStore.removeChangeListener(this._onChange);
+        IsshoikkaArrangementNavigationStore.removeChangeListener(
+            this._onChange
+        );
         IsshoikkaFontStore.removeChangeListener(this._onChange);
         IsshoikkaImageStore.removeChangeListener(this._onChange);
         IsshoikkaPlantStore.removeChangeListener(this._onChange);
     }
 
     _onChange() {
-      console.log('on change', getState());
         this.setState(getState());
     }
 

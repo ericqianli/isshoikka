@@ -10,7 +10,6 @@ const TEST_FONT_STRING: string = "\uE05A";
 
 const IsshoikkaFontUtil = {
     loadAll(): Promise<boolean> {
-        console.log('load all fonts');
         return new Promise((resolve) => {
             WebFont.load({
                 custom: {

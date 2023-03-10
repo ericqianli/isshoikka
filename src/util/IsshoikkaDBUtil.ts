@@ -64,10 +64,8 @@ const IsshoikkaDBUtil = {
         return new Promise((resolve) => {
             let image = new Image();
             const imageUrl = arrangement.getImageURI(quality);
-            console.log("imageUrl", imageUrl);
 
             image.onload = () => {
-                console.log("!!!image loaded");
                 const isshoikkaImage = new IsshoikkaImage({
                     arrangement_id: arrangement.getID(),
                     url: imageUrl,
@@ -78,16 +76,7 @@ const IsshoikkaDBUtil = {
                 resolve(isshoikkaImage);
             };
 
-            image.onerror = (error) => {
-                console.log("!!!loading image error", error);
-            };
-
-            // image.src = require(imageUrl);
-            // const ImageSrc = require("../images/6-low.jpg");
-            // const ImageSrc = require(imageUrl);
-            // image.src = ImageSrc;
-
-            // image.src = import(imageUrl);
+            image.onerror = (error) => {};
 
             image.src = imageUrl;
         });
