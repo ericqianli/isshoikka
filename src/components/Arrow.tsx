@@ -56,17 +56,17 @@ class Arrow extends Component<Props> {
         const width = 48;
         const height = 48;
         const size = 48;
-        return (<div
-            className={classNames(
-                "arrow",
-                this._getArrowClass("dark")
-            )}
-            style={{
-                width: width + "px",
-                height: height + "px",
-                backgroundSize: size + "px  auto",
-            }}
-        />);
+        // return (<div
+        //     className={classNames(
+        //         "arrow",
+        //         this._getArrowClass("dark")
+        //     )}
+        //     style={{
+        //         width: width + "px",
+        //         height: height + "px",
+        //         backgroundSize: size + "px  auto",
+        //     }}
+        // />);
 
 
         return (
@@ -78,6 +78,7 @@ class Arrow extends Component<Props> {
                     )}
                     style={{
                         width: width + "px",
+                        height: height + "px",
                         backgroundSize: size + "px  auto",
                     }}
                 >
@@ -88,6 +89,7 @@ class Arrow extends Component<Props> {
                         )}
                         style={{
                             width: width + "px",
+                            height: height + "px",
                             backgroundSize: size + "px  auto",
                         }}
                     />
