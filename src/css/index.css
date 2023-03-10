@@ -483,6 +483,7 @@ body {
 .sideNavigation, .arrow {
 	cursor: pointer;
 	background-color: blue;
+	height: auto;
 }
 
 .arrow {
