@@ -12,6 +12,7 @@ import IsshoikkaArrangementStore from "./IsshoikkaArrangementStore";
 import IsshoikkaClientStore from "../util/IsshoikkaClientStore";
 import IsshoikkaDispatcher from "../dispatcher/IsshoikkaDispatcher";
 import IsshoikkaInitializerActionConstants from "../constants/IsshoikkaInitializerActionConstants";
+import IsshoikkaRouteUtil from "../util/IsshoikkaRouteUtil";
 
 import { EventEmitter } from "events";
 
@@ -22,6 +23,7 @@ let _currentArrangementID = 0;
 function setCurrentArrangementID(id: number) {
     _currentArrangementID = id;
     IsshoikkaClientStore.set("currentArrangementID", id);
+    IsshoikkaRouteUtil.setChapterHash(id);
 }
 
 const IsshoikkaArrangementNavigationStore: any = assign(
@@ -98,7 +100,14 @@ IsshoikkaArrangementNavigationStore.dispatchToken = IsshoikkaDispatcher.register
                 let arrangementID = IsshoikkaClientStore.get(
                     "currentArrangementID"
                 );
-                if (!arrangementID) {
+                // fall back to the first chapter when nothing is stored, or
+                // when a shared link names a chapter that does not exist.
+                if (
+                    !arrangementID ||
+                    !IsshoikkaArrangementStore.getArrangementMap().has(
+                        arrangementID
+                    )
+                ) {
                     const firstArrangement = IsshoikkaArrangementStore.getFirstArrangement();
                     arrangementID = firstArrangement.getID();
                 }

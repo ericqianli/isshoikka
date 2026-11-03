@@ -156,6 +156,7 @@ body {
 
 .subTitle {
 	color: #493131;
+	letter-spacing: 0.1em;
 	font-family: "KangXiZiDianOpt", "KangXiZiDianCommon";
 	display: flex;
 	display: -webkit-flex;
@@ -167,7 +168,7 @@ body {
 
 .chapter {
 	display: inline-block;
-	height: 12em;
+	height: 12.5em;
 	font-size: 1em;
 	margin: 6em 0em 0em;
 	line-height: 1em;
@@ -186,6 +187,7 @@ body {
 
 .menu {
 	color: #3D3B4F;
+	letter-spacing: 0.1em;
 	font-family: "KangXiZiDianCommon";
 	list-style-type: none;
 	-webkit-padding-start: 0;
@@ -336,6 +338,7 @@ body {
 
 .copyrightFishtail {
 	display: inline-block;
+	letter-spacing: 0.1em;
 	margin-top: 0em;
 	color: #D1D9E0;
 }
@@ -588,4 +591,97 @@ body {
 #testFont span {
 	margin-left: 5px;
 	margin-right: 5px;
+}
+/* gallery: an even grid of resting fans, one per chapter */
+.gallery {
+	/* 4 fans of 278px + 3 gaps of 32px = 1208px, plus 56px padding each side
+	   so the grid never runs under the fixed corner labels */
+	max-width: 1320px;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #3D3B4F;
+	padding: 28px 56px 64px;
+	box-sizing: border-box;
+}
+
+
+
+.galleryGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 278px);
+	justify-content: center;
+	gap: 2.2em 2em;
+	/* chapters run right to left within a row, like the arrows on the main page */
+	direction: rtl;
+}
+
+.galleryTile {
+	display: block;
+	color: #493131;
+	text-decoration: none;
+}
+
+.galleryFan {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.galleryMask {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	right: -1px;
+	bottom: -1px;
+	background-image: url("/public/images/mask.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+
+
+
+/* navigation: vertical corner labels in the top right, after the language
+   toggle on xuanguang.starlia.ai (same font stack, size, spacing and offsets) */
+.navCorner {
+	position: fixed;
+	top: 22px;
+	right: 22px;
+	z-index: 9;
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.25em;
+	color: #D1D9E0;
+}
+
+/* one vertical text run: links and the "|" share a baseline, so the bar sits
+   exactly on the text axis and turns sideways with the Latin */
+.navLink {
+	color: #D1D9E0;
+	text-decoration: none;
+	transition: color .15s ease-out;
+	-moz-transition: color .15s ease-out;
+	-webkit-transition: color .15s ease-out;
+}
+
+.navLink:hover,
+.navLink:focus,
+.navLinkCurrent {
+	color: #493131;
+}
+
+.navSeparator {
+	color: #D1D9E0;
+	margin: 0.35em 0;
+	/* the glyph is longer than the cap height and sits on the baseline, so
+	   nudge it toward the ascender side to center it on the letters */
+	position: relative;
+	left: 0.1em;
 }

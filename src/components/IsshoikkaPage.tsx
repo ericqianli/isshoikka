@@ -54,17 +54,21 @@ export default class IsshoikkaPage extends Component<Props, State> {
             fanSize: DEFAULT_SIZE,
             layout: "horizontal",
         };
+        // bind once so removeEventListener gets the same function back;
+        // a fresh bind on removal would leak a listener per mount.
+        this._handleResize = this._handleResize.bind(this);
+        this._handleKeyDown = this._handleKeyDown.bind(this);
     }
 
     componentDidMount() {
-        window.addEventListener("resize", this._handleResize.bind(this));
-        window.addEventListener("keydown", this._handleKeyDown.bind(this));
+        window.addEventListener("resize", this._handleResize);
+        window.addEventListener("keydown", this._handleKeyDown);
         this._handleResize();
     }
 
     componentWillUnmount() {
-        window.removeEventListener("resize", this._handleResize.bind(this));
-        window.removeEventListener("keydown", this._handleKeyDown.bind(this));
+        window.removeEventListener("resize", this._handleResize);
+        window.removeEventListener("keydown", this._handleKeyDown);
     }
 
     _getSize(nextLayout: Layout): number {
