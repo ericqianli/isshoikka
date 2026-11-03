@@ -611,7 +611,10 @@ body {
 	display: grid;
 	/* 278px is the width that gives exactly four columns at the 1320px cap;
 	   narrower windows stretch fewer columns to fill the row */
-	grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+	/* min(278px, 100%) keeps the single column inside the container on
+	   phones narrower than 278px + margins; in rtl any overflow would spill
+	   off the left edge */
+	grid-template-columns: repeat(auto-fill, minmax(min(278px, 100%), 1fr));
 	gap: 2.2em 2em;
 	/* chapters run right to left within a row, like the arrows on the main page */
 	direction: rtl;
