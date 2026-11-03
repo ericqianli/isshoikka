@@ -690,17 +690,25 @@ body {
 	left: 0.1em;
 }
 
-/* phones: larger corner labels, further from the edges and the scroll bar;
-   the gallery keeps a wider side margin so the fans stay clear of them */
+/* phones: a single column, so the labels run horizontally across the top
+   band at the desktop size and scroll away with the page */
 @media (max-width: 760px) {
 	.navCorner {
-		font-size: 18px;
-		line-height: 24px;
-		top: 36px;
-		right: 28px;
+		position: absolute;
+		top: 12px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		writing-mode: horizontal-tb;
+		-webkit-writing-mode: horizontal-tb;
+	}
+
+	.navSeparator {
+		left: 0;
+		margin: 0 0.35em;
 	}
 
 	.gallery {
-		padding: 28px 64px 64px;
+		padding: 56px 24px 64px;
 	}
 }
