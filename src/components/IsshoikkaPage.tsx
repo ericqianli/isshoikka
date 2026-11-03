@@ -24,6 +24,8 @@ const MIN_SIZE: number = 400;
 
 const SIDE_WIDTH: number = 100; // reserved for navigation arrows
 
+const MIN_FONT_SIZE: number = 12;
+
 const KEY_CODE = {
     LEFT: 37,
     RIGHT: 39,
@@ -87,7 +89,9 @@ export default class IsshoikkaPage extends Component<Props, State> {
         if (size > MAX_SIZE) {
             size = MAX_SIZE;
         }
-        if (size < MIN_SIZE) {
+        // the minimum only applies side by side; a phone in portrait is
+        // narrower than MIN_SIZE and the fan must still fit the screen.
+        if (nextLayout == "horizontal" && size < MIN_SIZE) {
             size = MIN_SIZE;
         }
         return size;
@@ -185,7 +189,11 @@ export default class IsshoikkaPage extends Component<Props, State> {
     }
 
     render() {
-        const fontSize = Math.round(this.state.fanSize * 0.03);
+        // 3% of the fan, but never below a readable size on small fans
+        const fontSize = Math.max(
+            MIN_FONT_SIZE,
+            Math.round(this.state.fanSize * 0.03)
+        );
         return (
             <div
                 id="index"
