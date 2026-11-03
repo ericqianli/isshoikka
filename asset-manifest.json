@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.bafd188f.css",
+    "main.css": "./static/css/main.87504586.css",
     "main.js": "./static/js/main.deb4a36c.js",
     "static/media/KangXiDictOpt.ttf": "./static/media/KangXiDictOpt.3014a718c7f175488098.ttf",
     "static/media/KangXiDictCommon.ttf": "./static/media/KangXiDictCommon.a834805afd5c4648200a.ttf",
@@ -11,11 +11,11 @@
     "static/media/left.png": "./static/media/left.7b0351b55cfa5e92798f.png",
     "static/media/right.png": "./static/media/right.9ea551d73ce7a4ce10bf.png",
     "index.html": "./index.html",
-    "main.bafd188f.css.map": "./static/css/main.bafd188f.css.map",
+    "main.87504586.css.map": "./static/css/main.87504586.css.map",
     "main.deb4a36c.js.map": "./static/js/main.deb4a36c.js.map"
   },
   "entrypoints": [
-    "static/css/main.bafd188f.css",
+    "static/css/main.87504586.css",
     "static/js/main.deb4a36c.js"
   ]
 }
