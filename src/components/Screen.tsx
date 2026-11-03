@@ -12,6 +12,7 @@ import IsshoikkaArrangement from "../entities/IsshoikkaArrangement";
 import IsshoikkaImage from "../entities/IsshoikkaImage";
 import NameColumn from "./NameColumn";
 import React, { Component } from "react";
+import SocialLink from "./SocialLink";
 
 import type IsshoikkaPlant from "../entities/IsshoikkaPlant";
 import type { Layout, Point } from "./Fan";
@@ -173,6 +174,16 @@ class Screen extends Component<Props, State> {
                             {this._getChapterNumber()}
                         </div>
                         <Copyright />
+                        <SocialLink
+                            glyph="facebook"
+                            href="https://facebook.com/isshoikka"
+                            label="Isshoikka on Facebook"
+                        />
+                        <SocialLink
+                            glyph="instagram"
+                            href="https://www.instagram.com/isshoikka"
+                            label="Isshoikka on Instagram"
+                        />
                     </div>
                 </div>
                 <Fan

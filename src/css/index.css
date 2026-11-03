@@ -340,6 +340,32 @@ body {
 	color: #D1D9E0;
 }
 
+.socialLink {
+	display: block;
+	width: 1em;
+	height: 1em;
+	margin-top: 1em;
+	color: #D1D9E0;
+	transition: color .15s ease-out;
+	-moz-transition: color .15s ease-out;
+	-webkit-transition: color .15s ease-out;
+}
+
+.socialLink + .socialLink {
+	margin-top: 0.64em;
+}
+
+.socialLink:hover,
+.socialLink:focus {
+	color: #493131;
+}
+
+.socialIcon {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 .copyrightContainer {
 	display: flex;
 	display: -webkit-flex;
