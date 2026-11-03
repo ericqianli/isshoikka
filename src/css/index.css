@@ -609,8 +609,9 @@ body {
 
 .galleryGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 278px);
-	justify-content: center;
+	/* 278px is the width that gives exactly four columns at the 1320px cap;
+	   narrower windows stretch fewer columns to fill the row */
+	grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
 	gap: 2.2em 2em;
 	/* chapters run right to left within a row, like the arrows on the main page */
 	direction: rtl;
@@ -684,4 +685,19 @@ body {
 	   nudge it toward the ascender side to center it on the letters */
 	position: relative;
 	left: 0.1em;
+}
+
+/* phones: larger corner labels, further from the edges and the scroll bar;
+   the gallery keeps a wider side margin so the fans stay clear of them */
+@media (max-width: 760px) {
+	.navCorner {
+		font-size: 18px;
+		line-height: 24px;
+		top: 36px;
+		right: 28px;
+	}
+
+	.gallery {
+		padding: 28px 64px 64px;
+	}
 }
