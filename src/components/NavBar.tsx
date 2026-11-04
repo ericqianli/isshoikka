@@ -8,9 +8,11 @@ import React, { Component } from "react";
 
 const classNames = require("classnames");
 
+// "about/" is a static page shipped in public/about, so it is a path, not a hash.
 const LINKS = [
     { key: "home", label: "Home", href: "#" },
     { key: "gallery", label: "Gallery", href: "#gallery" },
+    { key: "about", label: "About", href: "about/" },
 ];
 
 // Vertical corner labels in the top right, after the language toggle on
