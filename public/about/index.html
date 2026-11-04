@@ -106,7 +106,7 @@ a{color:inherit;text-decoration:none}
 .f-strong{font-size:21px;font-weight:400}
 .f-zen{padding:80px 28px}
 .f-contact{padding:96px 28px 80px;text-align:center}
-.f-logo{width:150px;display:block;margin:0 auto}
+.f-logo{width:150px;height:auto;display:block;margin:0 auto}
 .f-ccol{margin:28px 0}
 .f-cval{font-size:15px;line-height:2;letter-spacing:.1em;color:#4a463f;font-weight:300;margin-top:4px}
 .f-cval a{text-decoration:none}
@@ -118,9 +118,6 @@ a{color:inherit;text-decoration:none}
 }
 
 
-/* test page: the rounded hairline pill at every size, not only on phones */
-.corner.top{display:block;top:22px;right:22px;padding:9px 14px;border-radius:999px;border:1px solid rgba(43,41,37,.18);background:rgba(243,239,230,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 1px 2px rgba(0,0,0,.06)}
-@media (max-width:899.98px),(max-height:559.98px){.corner.top{top:calc(14px + env(safe-area-inset-top));right:14px}}
 
 /* isshoikka site navigation: same rules as src/css/index.css, About is the current page */
 .navCorner{position:fixed;top:22px;right:22px;z-index:9;writing-mode:vertical-rl;-webkit-writing-mode:vertical-rl;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;font-size:15px;line-height:20px;letter-spacing:0.25em;color:#D1D9E0}
@@ -128,19 +125,33 @@ a{color:inherit;text-decoration:none}
 .navLink:hover,.navLink:focus,.navLinkCurrent{color:#493131}
 .navSeparator{color:#D1D9E0;margin:0.35em 0;position:relative;left:0.1em}
 /* desktop: the language pill sits below the vertical nav in the same corner */
-@media (min-width:900px) and (min-height:560px){.corner.top{top:300px}}
+@media (min-width:900px) and (min-height:560px){.corner.top{top:276px;right:24px}}  /* axis on the nav's text axis, just under About */
 @media (max-width:899.98px),(max-height:559.98px){
   /* a paper band above the reflowed pages holds the nav; the pill floats just under it */
   .flow{padding-top:48px}
-  .navCorner{position:absolute;top:14px;left:0;right:0;text-align:center;writing-mode:horizontal-tb;-webkit-writing-mode:horizontal-tb}
-  .navSeparator{left:0;margin:0 0.35em}
-  .corner.top{top:calc(60px + env(safe-area-inset-top))}
+  /* nav centered on the page; the pill (36px tall) is centered on the nav's 20px line at the right,
+     slightly tighter than on xuanguang so both fit a 390px screen */
+  .navCorner{position:absolute;top:14px;left:0;right:0;text-align:center;letter-spacing:0.15em;writing-mode:horizontal-tb;-webkit-writing-mode:horizontal-tb}
+  .navSeparator{left:0;margin:0 0.3em}
+  .corner.top{top:calc(6px + env(safe-area-inset-top));right:10px;padding:9px 10px}
 }
+
+/* about page: no page numbers or site-name footnotes */
+.folio,.hfolio,.f-url{display:none}
+
+/* phones: the cover title block gets the same 80px top/bottom margin as the 三味 page */
+@media (max-width:899.98px),(max-height:559.98px){.f-ct{padding:160px 28px}}
 </style>
 </head>
 <body>
 <nav class="navCorner" aria-label="Site"><a class="navLink" href="../">Home</a><span class="navSeparator">|</span><a class="navLink" href="../#gallery">Gallery</a><span class="navSeparator">|</span><a class="navLink navLinkCurrent" href="#">About</a></nav>
 <div class="book">
+<div class="sheet"><div class="page">
+  <div class="img fit" style="left:773px;top:0;width:667px;height:1000px;background-image:url(img/cover.jpg);background-position:left center"></div>
+  <div class="cjk side" style="position:absolute;left:228px;top:100px;font-size:48px;font-weight:300;line-height:1;letter-spacing:.38em"><span style="letter-spacing:.3em;position:relative;left:3px">ISSHOIKKA</span></div>
+  <div class="cjk side" style="position:absolute;left:166px;top:100px;font-size:24px;line-height:1;letter-spacing:.3em;font-weight:300;color:#2b2925">BY STARLIA</div>
+  <div class="cjk up" style="position:absolute;left:110px;top:100px;font-size:18px;letter-spacing:.45em;font-weight:300;color:#4a463f">回到完美的内在</div>
+</div></div>
 <div class="sheet"><div class="page"><div class="img fit " style="left:0;top:0;width:796px;height:1000px;background-image:url(img/21.jpg);background-position:left center;"></div><div class="vb" style="left:889px;right:auto"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk h">一生一花 · Isshoikka</div><div class="lat sub"><span class="lt">Ikebana</span> <span class="lt">·</span> 禅花一味</div></a><div class="cjk tag">通过「禅花一味」，<br>由花的自然，体会生命的自然。</div><div class="rule"></div><div class="cjk body"><p>「一生一花」始创于二〇一五年，旨在于插花中融入禅境，以花为镜，照见自己。现有关注<a href="https://www.facebook.com/isshoikka">二十六万</a>，硅谷线下工作坊广受好评。</p><p>创始人玄光修习插花十余年，多次于日本京都池坊总部进修、参展，具池坊师范资质。玄光以禅修实践融入花艺创作中，令人体悟与自然合一的深层喜悦；进而把「禅花一味」的领悟带入日常生活中，获得更多的自适、自洽和自然。</p></div></div><div class="lat folio" style="right:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div></div></div>
 <div class="sheet"><div class="page"><div class="img fit " style="right:0;top:0;width:750px;height:1000px;background-image:url(img/workshop.jpg);background-position:right center;"></div><div class="vb" style="right:860px"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk h">止语</div><div class="lat sub"><span class="lt">Silence</span> <span class="lt">·</span> 工作坊</div></a><div class="cjk tag">没有手机，没有说话，没有预设或评判。</div><div class="rule"></div><div class="cjk body"><p>拈花，凝视，裁剪，安置。每一个当下即是觉知，每一份宁静即是感动。</p><p class="quote">「在很安静很流动的环境里，感受植物本来的美。在每一下修枝叶的落剪时，都在感受植物本身的美。通过整理花材去顺应花道的框架的过程中，也是整理内心对于何为自然何为美的一场内观之旅。」—— 学员 <span class="lt">C.</span></p></div></div><div class="lat folio" style="left:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div></div></div>
 <div class="sheet"><div class="page" style="background:#d8d1b3"><div class="img" style="left:0;top:0;width:796px;height:1000px;background-image:url(img/baked_en_5.jpg);background-size:100% 100%"></div><div class="vb" style="right:110px"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk h">一枝见天地</div><div class="lat sub"><span class="lt">One stem</span>, <span class="lt">the whole world</span></div></a><div class="rule"></div><div class="cjk body"><p><span style="font-weight:400;color:#2b2925">见无常：</span>「立于吹散花朵、剥落枝叶的风前，便可能领受开悟的种子。」</p><p><span style="font-weight:400;color:#2b2925">见自然：</span>「让自身去聆听自然之无声而又隐秘的秩序。」</p><p><span style="font-weight:400;color:#2b2925">见合一：</span>「天然之姿为表现之本，其中蕴含我们印象的理想之像。」</p><p class="quote">「随着专注地去观察与修剪，才发现看似单一的花材竟然能展现出如此不同的风骨。过程中甚至触发了许多关于哲学与人生的领悟。」—— 学员 <span class="lt">K.</span></p></div></div><div class="lat folio" style="right:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div></div></div>
@@ -155,9 +166,21 @@ a{color:inherit;text-decoration:none}
   <div class="lat folio" style="right:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div>
 </div></div>
 <div class="sheet"><div class="page"><div class="img fit " style="right:0;top:0;width:1000px;height:1000px;background-image:url(img/portrait.jpg);background-position:right center;"></div><div style="position:absolute;top:110px;height:780px;left:0;right:1000px;display:flex;justify-content:center"><div class="vb" style="position:static"><div class="cjk h">玄光</div><div class="lat sub"><span class="lt">Xuan Guang</span></div><div class="rule"></div><div class="cjk body"><p>玄光，本名钱力，祖籍杭州，现定居美国硅谷。浙江大学竺可桢学院、香港大学学士，密歇根大学计算机硕士、博士。曾事脸书、谷歌十余年，任工程师经理。</p><p>家学渊源，自幼受文艺熏陶，涉猎诗歌、音乐、书法、篆刻、花道、茶道、剑道、陶艺、木艺、纸艺、汉服、收藏等。创立一生一花、太玄琴社、九歌诗社、<span class="lt lc">Ocean & Morus</span>、<span class="lt lc">Starlia</span>、<span class="lt lc">Lumilab.AI</span>、内在探索研究实验室。</p><p>多年坚持禅修、实修，大量从事志愿工作，致力于把生命内在探索融入到各个领域，启发人类成就圆满、完美、幸福、快乐的生命。</p></div></div></div></div></div>
+<div class="sheet"><div class="page">
+  <img src="img/logo.png" style="position:absolute;left:670px;top:268px;width:260px">
+  <div class="hair" style="left:799px;top:604px;width:1px;height:56px"></div>
+  <div style="position:absolute;left:0;right:0;top:704px;display:flex;justify-content:center;gap:40px"><div style="width:300px;text-align:center"><div class="lat" style="font-size:11px;letter-spacing:.4em;color:#8a8577">WeChat</div><div class="cjk" style="font-size:15px;line-height:2.2;letter-spacing:.12em;margin-top:10px;color:#4a463f;font-weight:300">6462973</div></div><div style="width:300px;text-align:center"><div class="lat" style="font-size:11px;letter-spacing:.4em;color:#8a8577">Web</div><div class="cjk" style="font-size:15px;line-height:2.2;letter-spacing:.12em;margin-top:10px;color:#4a463f;font-weight:300"><a href="https://starlia.ai" style="color:inherit;text-decoration:none">starlia.ai</a><br><a href="https://isshoikka.com" style="color:inherit;text-decoration:none">isshoikka.com</a><br><a href="https://haoshou.app" style="color:inherit;text-decoration:none">haoshou.app</a></div></div><div style="width:300px;text-align:center"><div class="lat" style="font-size:11px;letter-spacing:.4em;color:#8a8577">Email</div><div class="cjk" style="font-size:15px;line-height:2.2;letter-spacing:.12em;margin-top:10px;color:#4a463f;font-weight:300"><a href="mailto:li@starlia.ai" style="color:inherit;text-decoration:none">li@starlia.ai</a></div></div></div>
+  <div class="cjk" style="position:absolute;left:0;right:0;top:884px;text-align:center;font-size:12px;letter-spacing:.5em;color:#8a8577;font-weight:300">回到完美的内在</div>
+  <div class="lat" style="position:absolute;left:0;right:0;top:912px;text-align:center;font-size:11px;letter-spacing:.4em;color:#8a8577"><a href="https://xuanguang.starlia.ai" style="color:inherit;text-decoration:none">Full Portfolio</a></div>
+</div></div>
 </div>
 <div class="corner top" data-items='[{"t":"中","cur":1},{"sep":1},{"t":"EN","href":"en/","nav":1}]'></div>
 <div class="flow">
+<section class="f-cover">
+  <img src="img/cover.jpg" width="1335" height="2000" alt="">
+  <div class="f-ct"><div class="f-title cjk"><div class="lat" style="letter-spacing:.3em;margin-right:-.3em">ISSHOIKKA</div><div class="lat" style="font-size:.5em;letter-spacing:.3em;margin-right:-.3em">BY STARLIA</div></div>
+  <div class="f-subtitle cjk">回到完美的内在</div></div>
+</section>
 <section class="f-sec">
   <div class="f-pics"><img src="img/21.jpg" width="1592" height="2000" alt=""></div>
   <div class="f-text"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk f-h">一生一花 · Isshoikka</div><div class="lat f-small">Ikebana · 禅花一味</div></a><div class="cjk f-tag">通过「禅花一味」，由花的自然，体会生命的自然。</div><div class="f-rule"></div><div class="cjk f-body"><p>「一生一花」始创于二〇一五年，旨在于插花中融入禅境，以花为镜，照见自己。现有关注<a href="https://www.facebook.com/isshoikka">二十六万</a>，硅谷线下工作坊广受好评。</p><p>创始人玄光修习插花十余年，多次于日本京都池坊总部进修、参展，具池坊师范资质。玄光以禅修实践融入花艺创作中，令人体悟与自然合一的深层喜悦；进而把「禅花一味」的领悟带入日常生活中，获得更多的自适、自洽和自然。</p></div><div class="f-url lat"><a href="https://isshoikka.com">isshoikka.com</a></div></div>
@@ -181,6 +204,16 @@ a{color:inherit;text-decoration:none}
   <div class="f-pics"><img src="img/portrait.jpg" width="1024" height="1024" alt=""></div>
   <div class="f-text"><div class="cjk f-h">玄光</div><div class="lat f-small">Xuan Guang</div><div class="f-rule"></div><div class="cjk f-body"><p>玄光，本名钱力，祖籍杭州，现定居美国硅谷。浙江大学竺可桢学院、香港大学学士，密歇根大学计算机硕士、博士。曾事脸书、谷歌十余年，任工程师经理。</p><p>家学渊源，自幼受文艺熏陶，涉猎诗歌、音乐、书法、篆刻、花道、茶道、剑道、陶艺、木艺、纸艺、汉服、收藏等。创立一生一花、太玄琴社、九歌诗社、<span class="lt lc">Ocean & Morus</span>、<span class="lt lc">Starlia</span>、<span class="lt lc">Lumilab.AI</span>、内在探索研究实验室。</p><p>多年坚持禅修、实修，大量从事志愿工作，致力于把生命内在探索融入到各个领域，启发人类成就圆满、完美、幸福、快乐的生命。</p></div></div>
 </section>
+<section class="f-sec f-contact">
+  <img class="f-logo" src="img/logo.png" width="649" height="699" alt="Starlia">
+  <div class="f-rule" style="margin:36px auto"></div>
+  <div class="f-ccol"><div class="lat f-small">WeChat</div><div class="cjk f-cval">6462973</div></div>
+  <div class="f-ccol"><div class="lat f-small">Web</div><div class="cjk f-cval"><a href="https://starlia.ai" style="color:inherit;text-decoration:none">starlia.ai</a><br><a href="https://isshoikka.com" style="color:inherit;text-decoration:none">isshoikka.com</a><br><a href="https://haoshou.app" style="color:inherit;text-decoration:none">haoshou.app</a></div></div>
+  <div class="f-ccol"><div class="lat f-small">Email</div><div class="cjk f-cval"><a href="mailto:li@starlia.ai" style="color:inherit;text-decoration:none">li@starlia.ai</a></div></div>
+  
+  <div class="cjk f-end">回到完美的内在</div>
+  <div class="lat f-small" style="margin-top:12px"><a href="https://xuanguang.starlia.ai" style="color:inherit;text-decoration:none">Full Portfolio</a></div>
+</section>
 </div>
 <script>
 (function(){
@@ -193,9 +226,9 @@ a{color:inherit;text-decoration:none}
 // and browser, so the labels stay centred and symmetric whatever the corners are set in.
 (function(){
   var SIZE=12, NS='http://www.w3.org/2000/svg', AXIS, LS, W=16;   // W: box width → axis 22+8 = 30px from the edge
-  function phone(){ return true; }
+  function phone(){ return innerWidth<900||innerHeight<560; }
   function go(){
-    AXIS=(document.documentElement.className.indexOf('axis-h')>=0||phone())?'h':'v'; LS=(AXIS==='v'?0.35:0.2)*SIZE;   // phones: always horizontal
+    AXIS=phone()?'h':'v'; LS=(AXIS==='v'?0.35:0.2)*SIZE;   // phones: always horizontal
     var cv=document.createElement('canvas').getContext('2d');
     document.querySelectorAll('.corner').forEach(function(box){
       var FONT=getComputedStyle(box).fontFamily; cv.font=SIZE+'px '+FONT;
@@ -213,7 +246,7 @@ a{color:inherit;text-decoration:none}
           if(AXIS==='v'){
             if(rot){ node.setAttribute('transform','translate('+(c-(m.A-m.D)/2)+','+(cur-m.L)+') rotate(90)'); cur+=m.R-m.L; }
             else   { node.setAttribute('x',c-(m.L+m.R)/2); node.setAttribute('y',cur+m.A); cur+=m.A+m.D; }
-          } else { node.setAttribute('x',cur-m.L); node.setAttribute('y',c+(m.A-m.D)/2); cur+=m.R-m.L; }
+          } else { node.setAttribute('x',cur-m.L); node.setAttribute('y',c+(m.A-m.D)/2+(cjk?0:0.5)); cur+=m.R-m.L; }   /* Latin runs sit a hair high beside the CJK glyph on phones: drop them half a pixel */
         } else if(it.sep){
           node = AXIS==='v' ? el('line',{x1:c-6,x2:c+6,y1:cur+.5,y2:cur+.5}) : el('line',{y1:c-6,y2:c+6,x1:cur+.5,x2:cur+.5});
           node.setAttribute('stroke','rgba(43,41,37,.3)'); cur+=1;
