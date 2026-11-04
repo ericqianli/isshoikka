@@ -121,9 +121,25 @@ a{color:inherit;text-decoration:none}
 /* test page: the rounded hairline pill at every size, not only on phones */
 .corner.top{display:block;top:22px;right:22px;padding:9px 14px;border-radius:999px;border:1px solid rgba(43,41,37,.18);background:rgba(243,239,230,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 1px 2px rgba(0,0,0,.06)}
 @media (max-width:899.98px),(max-height:559.98px){.corner.top{top:calc(14px + env(safe-area-inset-top));right:14px}}
+
+/* isshoikka site navigation: same rules as src/css/index.css, About is the current page */
+.navCorner{position:fixed;top:22px;right:22px;z-index:9;writing-mode:vertical-rl;-webkit-writing-mode:vertical-rl;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;font-size:15px;line-height:20px;letter-spacing:0.25em;color:#D1D9E0}
+.navLink{color:#D1D9E0;text-decoration:none;transition:color .15s ease-out}
+.navLink:hover,.navLink:focus,.navLinkCurrent{color:#493131}
+.navSeparator{color:#D1D9E0;margin:0.35em 0;position:relative;left:0.1em}
+/* desktop: the language pill sits below the vertical nav in the same corner */
+@media (min-width:900px) and (min-height:560px){.corner.top{top:300px}}
+@media (max-width:899.98px),(max-height:559.98px){
+  /* a paper band above the reflowed pages holds the nav; the pill floats just under it */
+  .flow{padding-top:48px}
+  .navCorner{position:absolute;top:14px;left:0;right:0;text-align:center;writing-mode:horizontal-tb;-webkit-writing-mode:horizontal-tb}
+  .navSeparator{left:0;margin:0 0.35em}
+  .corner.top{top:calc(60px + env(safe-area-inset-top))}
+}
 </style>
 </head>
 <body>
+<nav class="navCorner" aria-label="Site"><a class="navLink" href="../">Home</a><span class="navSeparator">|</span><a class="navLink" href="../#gallery">Gallery</a><span class="navSeparator">|</span><a class="navLink navLinkCurrent" href="#">About</a></nav>
 <div class="book">
 <div class="sheet"><div class="page"><div class="img fit " style="left:0;top:0;width:796px;height:1000px;background-image:url(img/21.jpg);background-position:left center;"></div><div class="vb" style="left:889px;right:auto"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk h">一生一花 · Isshoikka</div><div class="lat sub"><span class="lt">Ikebana</span> <span class="lt">·</span> 禅花一味</div></a><div class="cjk tag">通过「禅花一味」，<br>由花的自然，体会生命的自然。</div><div class="rule"></div><div class="cjk body"><p>「一生一花」始创于二〇一五年，旨在于插花中融入禅境，以花为镜，照见自己。现有关注<a href="https://www.facebook.com/isshoikka">二十六万</a>，硅谷线下工作坊广受好评。</p><p>创始人玄光修习插花十余年，多次于日本京都池坊总部进修、参展，具池坊师范资质。玄光以禅修实践融入花艺创作中，令人体悟与自然合一的深层喜悦；进而把「禅花一味」的领悟带入日常生活中，获得更多的自适、自洽和自然。</p></div></div><div class="lat folio" style="right:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div></div></div>
 <div class="sheet"><div class="page"><div class="img fit " style="right:0;top:0;width:750px;height:1000px;background-image:url(img/workshop.jpg);background-position:right center;"></div><div class="vb" style="right:860px"><a href="https://isshoikka.com" style="color:inherit;text-decoration:none;display:block"><div class="cjk h">止语</div><div class="lat sub"><span class="lt">Silence</span> <span class="lt">·</span> 工作坊</div></a><div class="cjk tag">没有手机，没有说话，没有预设或评判。</div><div class="rule"></div><div class="cjk body"><p>拈花，凝视，裁剪，安置。每一个当下即是觉知，每一份宁静即是感动。</p><p class="quote">「在很安静很流动的环境里，感受植物本来的美。在每一下修枝叶的落剪时，都在感受植物本身的美。通过整理花材去顺应花道的框架的过程中，也是整理内心对于何为自然何为美的一场内观之旅。」—— 学员 <span class="lt">C.</span></p></div></div><div class="lat folio" style="left:110px"><span class="lt">01</span> <span class="lt">·</span> 一生一花 <span class="lt">·</span> <a href="https://isshoikka.com" style="color:inherit;text-decoration:none;text-transform:none;font-size:11px;letter-spacing:.22em"><span class="lt lc">isshoikka.com</span></a></div></div></div>
